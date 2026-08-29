@@ -146,10 +146,10 @@ const SearchImagesInputSchema = z
         'UI design search query. Examples: "dashboard dark mode", "mobile onboarding flow", "saas pricing page"'
       ),
     sites: z
-      .array(z.enum(["dribbble", "behance", "awwwards", "mobbin", "pinterest"]))
+      .array(z.enum(["dribbble", "behance", "awwwards", "mobbin", "pinterest", "landbook", "savee", "godly", "siteinspire"]))
       .default([])
       .describe(
-        "Filter to specific design sites. Empty array searches all sites. Options: dribbble, behance, awwwards, mobbin, pinterest"
+        "Filter to specific design sites. Empty array searches all sites. Options: dribbble, behance, awwwards, mobbin, pinterest, landbook, savee, godly, siteinspire"
       ),
     num: z
       .number()
@@ -222,7 +222,7 @@ const SearchReferencesInputSchema = z
         'UI design search query. Examples: "best dashboard designs 2025", "mobile navigation patterns"'
       ),
     sites: z
-      .array(z.enum(["dribbble", "behance", "awwwards", "mobbin", "pinterest"]))
+      .array(z.enum(["dribbble", "behance", "awwwards", "mobbin", "pinterest", "landbook", "savee", "godly", "siteinspire"]))
       .default([])
       .describe("Filter to specific design sites. Empty array searches all sites."),
     num: z
