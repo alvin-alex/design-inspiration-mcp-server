@@ -14,6 +14,10 @@ const DESIGN_SITES = {
   awwwards: "awwwards.com",
   mobbin: "mobbin.com",
   pinterest: "pinterest.com",
+  landbook: "land-book.com",
+  savee: "savee.it",
+  godly: "godly.website",
+  siteinspire: "siteinspire.com",
 } as const;
 
 type DesignSite = keyof typeof DESIGN_SITES;
