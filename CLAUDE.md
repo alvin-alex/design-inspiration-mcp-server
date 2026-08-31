@@ -1,7 +1,7 @@
 # design-inspiration-mcp — third-party fork, actively modified
 
 Upstream: https://github.com/YonasValentin/design-inspiration-mcp-server (author: Yonas
-Valentin, MIT). Forked to `alvin-alex/design-inspiration-mcp-server` and cloned here
+Valentin, MIT). Forked to alvin-alex/design-inspiration-mcp-server and cloned here
 2026-08-29. Unlike this workspace's other third-party clones (`doctor-plus`, `octogent`,
 `llm-council`, held at upstream for reference), this one is developed: SDK bumped, new
 design sources added, then registered as a local MCP server for the Agentic planning
@@ -15,7 +15,7 @@ call Serper (`SERPER_API_KEY`, not vendored — reads the env var itself); token
 shells out to the `dembrandt` npm CLI.
 
 Full history and the adoption rationale live in
-`~/Documents/Agentic/active-plans/design-inspiration-mcp-fork-2026-08-29.md` — read that
+`~/Documents/Agentic/archive-plans/[DONE] - design-inspiration-mcp-fork-2026-08-29.md` — read that
 before changing scope here.
 
 ## Stack
@@ -27,7 +27,7 @@ before changing scope here.
 ## Where context lives
 
 `Active/` for in-progress notes on this fork, `Archive/` once done. Durable reference (if
-any accumulates) goes in `docs/`.
+any accumulates) goes in a docs folder created when there's something to put in it.
 
 ## Project-specific rules
 
