@@ -1,6 +1,6 @@
 # design-inspiration
 
-MCP server that searches Dribbble, Behance, Awwwards, Mobbin, and Pinterest for UI design inspiration. Built for Claude Code but works with any MCP client.
+MCP server that searches Dribbble, Behance, Awwwards, Mobbin, Pinterest, Landbook, Savee, Godly, and Siteinspire for UI design inspiration. Built for Claude Code but works with any MCP client.
 
 Uses the [Serper API](https://serper.dev) (Google search) with `site:` filters to scope results to design platforms only. Can also extract actual design tokens (colors, fonts, spacing) from any live website via headless browser.
 
@@ -68,16 +68,6 @@ cd design-inspiration-mcp-server
 npm install
 npm run build
 ```
-
-## How it actually works
-
-Each tool builds a search query by appending `site:dribbble.com OR site:behance.net OR ...` to whatever you searched for. Then it hits Serper's `/images` or `/search` endpoint and formats the response.
-
-The `design_search_styles` tool runs both endpoints in parallel (`Promise.all`) to get images and articles for the same query.
-
-`design_extract_tokens` shells out to `dembrandt` (via `child_process.execFile`) with `--json-only`, parses the JSON output, and formats it into markdown + structured data. 60-second timeout. No extra npm dependencies — dembrandt runs as a global CLI and `child_process` is built-in.
-
-Results are returned as both markdown (for display) and structured JSON (for programmatic use). Responses get truncated at 25,000 characters to avoid flooding the context window.
 
 ## Usage tips
 

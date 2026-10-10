@@ -7,27 +7,16 @@ Valentin, MIT). Forked to alvin-alex/design-inspiration-mcp-server and cloned he
 design sources added, then registered as a local MCP server for the Agentic planning
 workspace.
 
-## What it is
+## Map
 
-A stdio MCP server, single file `src/index.ts`. Four tools: `design_search_images`,
-`design_search_references`, `design_search_styles`, `design_extract_tokens`. Search tools
-call Serper (`SERPER_API_KEY`, not vendored — reads the env var itself); token extraction
-shells out to the `dembrandt` npm CLI.
+A stdio MCP server, all in `src/index.ts`. The search tools call Serper; token extraction
+shells out to the `dembrandt` CLI (installed globally, not an npm dependency).
 
 Full history and the adoption rationale live in
 `~/Documents/Agentic/archive-plans/[DONE] - design-inspiration-mcp-fork-2026-08-29.md` — read that
 before changing scope here.
 
-## Stack
-
-- Node >=18, plain `tsc` build: `npm install && npm run build` → `dist/index.js`.
-- `npm run clean` removes `dist/`.
-- No lint/test scripts upstream shipped none.
-
-## Where context lives
-
-`Active/` for in-progress notes on this fork, `Archive/` once done. Durable reference (if
-any accumulates) goes in a docs folder created when there's something to put in it.
+Plans go in `Active/`, then `Archive/` once done.
 
 ## Project-specific rules
 
@@ -38,5 +27,4 @@ any accumulates) goes in a docs folder created when there's something to put in 
 
 ## Quality gates
 
-`npm run build` (tsc, no `any` used to silence errors) is the only gate. No test suite
-shipped upstream.
+`npm run build` (tsc, no `any` used to silence errors) is the only gate. Upstream shipped no tests.
